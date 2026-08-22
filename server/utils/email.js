@@ -5,8 +5,8 @@ dotenv.config();
 
 const transporter = nodemailer.createTransport({
     host: 'smtp-relay.brevo.com',
-    port: 2525,
-    secure: false, // true for 465, false for 587
+    port: 2525, 
+    secure: false, 
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS
@@ -16,7 +16,8 @@ const transporter = nodemailer.createTransport({
 const sendBookingEmail = async (userEmail, userName, eventTitle) => {
     try {
         const mailOptions = {
-            from: process.env.EMAIL_USER,
+            // 👇 Replace this with the exact email you used to sign up for Brevo
+            from: '"SmartGather" <rohithdannana9505@gmail.com>', 
             to: userEmail,
             subject: `Booking Confirmed: ${eventTitle}`,
             html: `
@@ -40,7 +41,8 @@ const sendOTPEmail = async (userEmail, otp, type) => {
             : 'Please use the following OTP to verify and confirm your event booking.';
 
         const mailOptions = {
-            from: process.env.EMAIL_USER,
+            // 👇 Replace this with the exact email you used to sign up for Brevo
+            from: '"SmartGather" <rohithdannana918203@gmail.com>',
             to: userEmail,
             subject: title,
             html: `
