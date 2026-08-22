@@ -21,6 +21,40 @@ SmartGather is a full-stack MERN application that allows users to seamlessly bro
 
 ---
 
+## 🛠️ Tech Stack
+
+**Frontend (`/client`)**
+*   React.js (Vite)
+*   Tailwind CSS
+*   Axios (API Client)
+
+**Backend (`/server`)**
+*   Node.js & Express.js
+*   MongoDB Atlas & Mongoose (Models: User, Event, Booking, OTP)
+*   Nodemailer (Email Delivery)
+*   JSON Web Tokens (JWT) for Auth
+
+## 📁 Project Structure
+
+```text
+smartgather-mern/
+├── client/                 # React Frontend
+│   ├── src/
+│   │   ├── components/     # Reusable UI components (Navbar, etc.)
+│   │   ├── context/        # React Context (AuthContext)
+│   │   ├── pages/          # Page views (Home, Login, Register, Dashboards)
+│   │   └── utils/          # Axios interceptors and utilities
+│   ├── tailwind.config.js  # Tailwind styling configuration
+│   └── vite.config.js      # Vite configuration
+│
+├── server/                 # Node.js Backend
+│   ├── controllers/        # Route logic (auth, bookings, events)
+│   ├── middleware/         # Custom middleware (auth.js)
+│   ├── models/             # Mongoose schemas
+│   ├── routes/             # Express API routes
+│   ├── utils/              # Helper functions (email.js)
+│   └── server.js           # Main application entry point
+
 ## 🚀 Setup Instructions
 
 ### Prerequisites
