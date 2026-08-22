@@ -54,6 +54,7 @@ smartgather-mern/
 │   ├── routes/             # Express API routes
 │   ├── utils/              # Helper functions (email.js)
 │   └── server.js           # Main application entry point
+```
 
 ## 🚀 Setup Instructions
 
